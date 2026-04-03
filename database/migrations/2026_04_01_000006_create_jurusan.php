@@ -13,8 +13,12 @@ return new class extends Migration
     {
         Schema::create('jurusan', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_jurusan');
+            $table->string('kode_jurusan', 10)->unique();
+            $table->string('nama_jurusan');                  
+            $table->text('deskripsi')->nullable();
             $table->integer('kuota')->default(0);
+            $table->boolean('is_aktif')->default(true);
+            $table->timestamps();
         });
     }
 
