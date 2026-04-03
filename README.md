@@ -1,6 +1,6 @@
-composer install
-rename .env.example to .env
-php artisan key:generate
-php artisan migrate
-php artisan db:seed
-php artisan serve
+1. composer install
+2. rename .env.example to .env
+3. php artisan key:generate
+4. php artisan migrate
+5. php artisan db:seed
+6. php artisan serve
